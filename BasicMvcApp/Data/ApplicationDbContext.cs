@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using BasicMvcApp.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace BasicMvcApp.Data
 {
@@ -9,5 +11,11 @@ namespace BasicMvcApp.Data
             : base(options)
         {
         }
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Supplier> Suppliers { get; set; }
+
+        public DbSet<Address> Addresses { get; set; }
     }
 }
